@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bharg.dsce.Authentication.Fragments.SignInFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/email"
+        android:hint="Email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/email"
+        android:id="@+id/password"
+        android:hint="Password"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Forgot password"
+                android:id="@+id/forgotpass"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="SIGN In"
+                android:layout_height="match_parent"
+                android:id="@+id/signin"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>
