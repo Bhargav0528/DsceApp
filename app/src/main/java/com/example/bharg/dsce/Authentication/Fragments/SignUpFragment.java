@@ -1,10 +1,8 @@
 package com.example.bharg.dsce.Authentication.Fragments;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,16 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.example.bharg.dsce.MainActivity;
 import com.example.bharg.dsce.R;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import com.example.bharg.dsce.Authentication.UserDetails;
 import com.google.firebase.auth.FirebaseAuth;
-
-import static android.content.ContentValues.TAG;
 
 
 /**
@@ -59,22 +51,11 @@ public class SignUpFragment extends Fragment {
                 String email = etemail.getText().toString();
                 String password = etpass.getText().toString();
                 Log.i(TAG,password);
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(getContext(), "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-                                // If sign in fails, display a message to the user. If sign in succeeds
-                                // the auth state listener will be notified and logic to handle the
-                                // signed in user can be handled in the listener.
-                                if (!task.isSuccessful()) {
-                                    Toast.makeText(getContext(), "Authentication failed." + task.getException(),
-                                            Toast.LENGTH_SHORT).show();
-                                } else {
-                                    startActivity(new Intent(getContext(), MainActivity.class));
-                                }
-                            }
-                        });
+
+                Intent inten = new Intent(getActivity(), UserDetails.class);
+                inten.putExtra("email",email);
+                inten.putExtra("pass",password);
+                startActivity(inten);
             }
         });
 

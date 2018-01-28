@@ -4,6 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.bharg.dsce.CollegeMaterials.CollegeStuff;
+import com.example.bharg.dsce.NewsAndEvents.NewsAndAnncouncement;
+
 /**
  * Created by bharg on 25-01-2018.
  */

@@ -2,12 +2,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bharg.dsce.CollegeStuff">
+    tools:context="com.example.bharg.dsce.CollegeMaterials.CollegeStuff">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="2"
+        android:layout_gravity="center_horizontal">
+        <android.support.v7.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:padding="3dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/timetable"
+                />
+            <TextView
+                android:id="@+id/tvtimetable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TIMETABLE"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15dp"
+                android:textColor="#000000"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/calendarcard">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="3dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/calendar"
+                    />
+                <TextView
+                    android:id="@+id/tvcalendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CALENDAR"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </GridLayout>
+    </LinearLayout>
 </FrameLayout>
